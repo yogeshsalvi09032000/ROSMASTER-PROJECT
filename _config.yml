@@ -1,8 +1,16 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: ROSMASTER Perception Pipeline
+description: ROS-based perception and feature tracking using Astra camera
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://yogeshsalvi09032000.github.io
+baseurl: /ROSMASTER-PROJECT
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+nav:
+  - title: Overview
+    url: /
+  - title: Setup
+    url: /setup
+  - title: Architecture
+    url: /architecture
+  - title: Results
+    url: /results
