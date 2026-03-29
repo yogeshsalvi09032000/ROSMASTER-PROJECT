@@ -33,3 +33,88 @@ This project implements a complete autonomous navigation system for the ROSMASTE
 - Costmaps for obstacle avoidance
 
 ## System Architecture
+┌─────────────────────────────────────────────────────────────┐
+│                    GAZEBO SIMULATION                        │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │         AWS Warehouse World                         │    │
+│  │  - Static environment (shelves, walls, obstacles)   │    │
+│  │  - ROSMASTER X3 Robot spawned at origin             │    │ 
+│  │  - Dynamic obstacles (optional)                     │    │
+│  └─────────────────────────────────────────────────────┘    │
+└────────────────────────┬────────────────────────────────────┘
+                         │
+        ┌────────────────┼────────────────┐
+        │                │                │
+        ▼                ▼                ▼
+   /scan (LaserScan) /cmd_vel (Twist) /odom (Odometry)
+        │                │                │
+        ▼                ▼                ▼
+┌──────────────────────────────────────────────────────────────┐
+│              ROS NAVIGATION STACK                            │
+├──────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────────────┐              ┌─────────────────┐       │
+│  │   Map Server     │              │   Odometry      │       │
+│  │  Publishes /map  │              │  (from Gazebo)  │       │
+│  └────────┬─────────┘              └────────┬────────┘       │
+│           │                                 │                │
+│           └─────────────┬───────────────────┘                │
+│                         │                                    │
+│                         ▼                                    │
+│              ┌────────────────────┐                          │
+│              │      AMCL          │                          │
+│              │  Localization      │ (Particle Filter)        │
+│              │  Position estimate │                          │
+│              └─────────┬──────────┘                          │
+│                        │                                     │
+│              ┌─────────▼──────────┐                          │
+│              │    move_base       │                          │
+│              │  Navigation Core   │                          │
+│          ┌───┴────────────────────┴────┐                     │
+│          │                             │                     │
+│     ┌────▼────────┐            ┌───────▼──────┐              │
+│     │Global Planner│           │Local Planner │              │
+│     │(Custom A*)   │           │   (DWA)      │              │
+│     │- Full Map    │           │- Real-time   │              │
+│     │- Finds Path  │           │- Avoidance   │              │
+│     └────┬────────┘            └───────┬──────┘              │
+│          │                             │                     │
+│          └─────────────┬───────────────┘                     │
+│                        │                                     │
+│                        ▼                                     │
+│              ┌────────────────────┐                          │
+│              │   Costmaps         │                          │
+│              │ Static + Dynamic   │                          │
+│              │ Obstacle Detection │                          │
+│              │ Inflation Layer    │                          │
+│              └────────┬───────────┘                          │
+│                       │                                      │
+│                       ▼                                      │
+│              ┌────────────────────┐                          │
+│              │  Velocity Smoother │                          │
+│              │  Command Output    │                          │
+│              └────────┬───────────┘                          │
+│                       │                                      │
+└───────────────────────┼──────────────────────────────────────┘
+                        │
+                /cmd_vel (Twist)
+                        │
+                        ▼
+        ┌───────────────────────────────┐
+        │   ROSMASTER X3 Control        │
+        │   • Mecanum wheel commands    │
+        │   • Motor controllers         │
+        │   • Wheel encoders            │
+        └───────────────────────────────┘
+
+
+## Key Features
+
+- Autonomous navigation to user-defined goals
+- Pre-mapped warehouse navigation
+- Real-time obstacle avoidance
+- SLAM-based map generation
+- Custom global planner implementation
+
+     
+
