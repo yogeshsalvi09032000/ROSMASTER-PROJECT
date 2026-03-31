@@ -3,7 +3,7 @@ description: ROS-based perception and feature tracking using Astra camera
 theme: just-the-docs
 
 url: https://yogeshsalvi09032000.github.io
-baseurl: /ROSMASTER-PROJECT
+baseurl: /ROSMASTER-PROJECT-WEBSITE/
 
 nav:
   - title: Overview
