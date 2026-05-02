@@ -19,7 +19,7 @@ Visual documentation of our ROSMASTER X3 digital twin and warehouse navigation p
   <div style="border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
     <h4>🔴 Red Stop Sign</h4>
     <video width="100%" controls>
-      <source src="{{ site.baseurl }}/assets/videos/Red_stop.mp4" type="video/mp4">
+      <source src="https://github.com/ASU-EGR530-PROJECT/ROSMASTER-PROJECT-WEBSITE/releases/download/v1.0/Red_stop.mp4" type="video/mp4">
     </video>
     <p style="font-size: 0.9em; color: #666;">Robot halts when detecting red stop markers</p>
   </div>
@@ -27,7 +27,7 @@ Visual documentation of our ROSMASTER X3 digital twin and warehouse navigation p
   <div style="border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
     <h4>🟡 Yellow Warning</h4>
     <video width="100%" controls>
-      <source src="{{ site.baseurl }}/assets/videos/yellow_warning.mp4" type="video/mp4">
+      <source src="https://github.com/ASU-EGR530-PROJECT/ROSMASTER-PROJECT-WEBSITE/releases/download/v1.0/yellow_warning.mp4" type="video/mp4">
     </video>
     <p style="font-size: 0.9em; color: #666;">Cautious behavior triggered by warning signs</p>
   </div>
@@ -35,7 +35,7 @@ Visual documentation of our ROSMASTER X3 digital twin and warehouse navigation p
   <div style="border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
     <h4>🚧 Obstacle Avoidance</h4>
     <video width="100%" controls>
-      <source src="{{ site.baseurl }}/assets/videos/Obstacle.mp4" type="video/mp4">
+      <source src="https://github.com/ASU-EGR530-PROJECT/ROSMASTER-PROJECT-WEBSITE/releases/download/v1.0/Obstacle.mp4" type="video/mp4">
     </video>
     <p style="font-size: 0.9em; color: #666;">Dynamic path replanning around obstacles</p>
   </div>
@@ -53,10 +53,6 @@ Visual documentation of our ROSMASTER X3 digital twin and warehouse navigation p
 </div>
 
 <div style="margin: 40px 0;">
-  <img src="{{ site.baseurl }}/assets/images/team-demo-2.jpeg" alt="Demo 2" style="width: 100%; border-radius: 8px; margin-bottom: 30px;">
-</div>
-
-<div style="margin: 40px 0;">
   <img src="{{ site.baseurl }}/assets/images/team-demo-3.jpeg" alt="Demo 3" style="width: 100%; border-radius: 8px; margin-bottom: 30px;">
 </div>
 
@@ -65,6 +61,8 @@ Visual documentation of our ROSMASTER X3 digital twin and warehouse navigation p
 ## Project Documentation
 
 📄 [Download Project Poster (PDF)]({{ site.baseurl }}/assets/documents/project-poster.pdf)
+
+The complete technical poster presented at the ASU Engineering Expo, covering system architecture, methodology, and results.
 
 ---
 

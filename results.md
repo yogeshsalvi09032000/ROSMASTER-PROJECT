@@ -15,7 +15,7 @@ This page showcases the successful implementation of our ROSMASTER X3 digital tw
 ### Red Stop Sign Detection
 
 <video width="100%" controls>
-  <source src="{{ site.baseurl }}/assets/videos/Red_stop.mp4" type="video/mp4">
+  <source src="https://github.com/ASU-EGR530-PROJECT/ROSMASTER-PROJECT-WEBSITE/releases/download/v1.0/Red_stop.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -26,7 +26,7 @@ The robot successfully detects red stop signs and halts navigation until the pat
 ### Yellow Warning Sign Detection
 
 <video width="100%" controls>
-  <source src="{{ site.baseurl }}/assets/videos/yellow_warning.mp4" type="video/mp4">
+  <source src="https://github.com/ASU-EGR530-PROJECT/ROSMASTER-PROJECT-WEBSITE/releases/download/v1.0/yellow_warning.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -37,7 +37,7 @@ Yellow warning signs trigger cautious navigation behavior, reducing speed and sc
 ### Dynamic Obstacle Avoidance
 
 <video width="100%" controls>
-  <source src="{{ site.baseurl }}/assets/videos/Obstacle.mp4" type="video/mp4">
+  <source src="https://github.com/ASU-EGR530-PROJECT/ROSMASTER-PROJECT-WEBSITE/releases/download/v1.0/Obstacle.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -57,7 +57,7 @@ The DWA local planner dynamically adjusts the path when obstacles appear, mainta
 ---
 
 <div style="margin: 20px 0;">
-  <img src="{{ site.baseurl }}/assets/images/team-demo-2.jpeg" alt="Team with project poster" style="width: 100%; max-width: 800px;">
+  <img src="{{ site.baseurl }}/assets/images/team-demo-3.jpeg" alt="Team with project poster" style="width: 100%; max-width: 800px;">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Team showcase with technical poster and live robot demonstration</p>
 </div>
 
@@ -70,6 +70,8 @@ The DWA local planner dynamically adjusts the path when obstacles appear, mainta
     📄 Download Full Project Poster (PDF)
   </a>
 </div>
+
+The poster provides a comprehensive overview of the system architecture, methodology, and results.
 
 ---
 
@@ -86,6 +88,28 @@ The DWA local planner dynamically adjusts the path when obstacles appear, mainta
 ✅ **Dynamic Obstacle Avoidance** — Real-time path replanning using DWA local planner
 
 ✅ **SLAM Capability** — Map creation using gmapping and Cartographer
+
+---
+
+## Performance Metrics
+
+| Metric | Value |
+|--------|-------|
+| Navigation Accuracy | ±15 cm, ±15° |
+| Goal Success Rate | 95%+ in simulation |
+| Obstacle Detection Range | 0.35 - 12 m (LiDAR) |
+| Maximum Speed | 0.3 m/s linear, 0.2 m/s lateral |
+| Localization Update Rate | 10 Hz |
+| Path Planning Frequency | 5 Hz |
+
+---
+
+## Next Steps
+
+- **Hardware Validation** — Deploy navigation stack on physical ROSMASTER X3
+- **Multi-Robot Coordination** — Extend to fleet management scenarios
+- **Advanced Perception** — Integrate camera-based object recognition for warehouse tasks
+- **Real-World Testing** — Benchmark performance in actual warehouse environments
 
 ---
 
