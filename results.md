@@ -57,14 +57,7 @@ The DWA local planner dynamically adjusts the path when obstacles appear, mainta
 ---
 
 <div style="margin: 20px 0;">
-  <img src="{{ site.baseurl }}/assets/images/team-demo-2.jpeg" alt="Full team at exhibition booth" style="width: 100%; max-width: 800px;">
-  <p style="font-style: italic; color: #666; margin-top: 10px;">EGR-530 Team 5 presenting the digital twin and warehouse navigation project</p>
-</div>
-
----
-
-<div style="margin: 20px 0;">
-  <img src="{{ site.baseurl }}/assets/images/team-demo-3.jpeg" alt="Team with project poster" style="width: 100%; max-width: 800px;">
+  <img src="{{ site.baseurl }}/assets/images/team-demo-2.jpeg" alt="Team with project poster" style="width: 100%; max-width: 800px;">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Team showcase with technical poster and live robot demonstration</p>
 </div>
 
